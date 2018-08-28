@@ -18,7 +18,7 @@
         <?php endforeach; ?>
 
             <br>
-        <!-- Using blade ('.blade.php') we can use other syntax which will be compiled to vanilla php -->
+        <!-- Using blade templating engine ('.blade.php') we can write shorter foreach syntax which will be compiled to vanilla php -->
         <!-- Below we will use shorthand syntax for foreach -->
 
         @foreach($tasks as $task)
