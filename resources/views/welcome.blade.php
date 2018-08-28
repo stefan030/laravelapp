@@ -13,16 +13,13 @@
     <h2>List of tasks:</h2>
 
     <ul>
-        <?php foreach($tasks as $task) : ?>
-            <li><?= $task; ?></li>
-        <?php endforeach; ?>
 
-            <br>
+
         <!-- Using blade templating engine ('.blade.php') we can write shorter foreach syntax which will be compiled to vanilla php -->
         <!-- Below we will use shorthand syntax for foreach -->
 
         @foreach($tasks as $task)
-            <li>{{ $task }}</li>
+            <li>{{ $task->body }}</li>
         @endforeach
 
     </ul>
