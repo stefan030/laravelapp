@@ -10,6 +10,22 @@
 <body>
 
     <h1>Home</h1>
+    <h2>List of tasks:</h2>
+
+    <ul>
+        <?php foreach($tasks as $task) : ?>
+            <li><?= $task; ?></li>
+        <?php endforeach; ?>
+
+            <br>
+        <!-- Using blade ('.blade.php') we can use other syntax which will be compiled to vanilla php -->
+        <!-- Below we will use shorthand syntax for foreach -->
+
+        @foreach($tasks as $task)
+            <li>{{ $task }}</li>
+        @endforeach
+
+    </ul>
 
 </body>
 </html>
