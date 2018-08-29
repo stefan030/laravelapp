@@ -11,25 +11,6 @@
 |
 */
 
-Route::get('/tasks', function () {
 
-    $tasks = App\Task::all();
-    // return $tasks; // returns JSON - great stuff for APIs
-
-    return view('tasks.index', compact('tasks'));
-});
-
-Route::get('/tasks/{id}', function ($id) {
-
-    $task = App\Task::find($id);
-
-    // return $tasks; // returns JSON - great stuff for APIs
-
-    return view('tasks.show', compact('task'));
-});
-
-
-
-Route::get('/about', function () {
-   return view('about');
-});
+Route::get('/tasks', 'TasksController@index');
+Route::get('/tasks/{task}', 'TasksController@show');
