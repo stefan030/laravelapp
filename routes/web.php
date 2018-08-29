@@ -13,8 +13,7 @@
 
 Route::get('/tasks', function () {
 
-    $tasks = DB::table('tasks')->get();
-
+    $tasks = App\Task::all();
     // return $tasks; // returns JSON - great stuff for APIs
 
     return view('tasks.index', compact('tasks'));
@@ -22,7 +21,7 @@ Route::get('/tasks', function () {
 
 Route::get('/tasks/{id}', function ($id) {
 
-    $task = DB::table('tasks')->find($id);
+    $task = App\Task::find($id);
 
     // return $tasks; // returns JSON - great stuff for APIs
 
